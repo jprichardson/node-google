@@ -1,0 +1,25 @@
+{
+    "name" : "google", 
+    "version" : "0.0.1",
+    "description" : "A module to search google.",
+    "homepage" : [
+        "https://github.com/jprichardson/node-google"
+    ],
+    "repository" : {
+        "type" : "git", 
+        "url" : "https://github.com/jprichardson/node-google"
+    },
+    "keywords" : ["google", "search"],
+    "author" : "JP Richardson <jprichardson@gmail.com>",
+    "licenses" : [ {
+        "type" : "MIT",
+        "url" : "http://github.com/jprichardson/node-google/raw/master/LICENSE"
+    }],
+    "dependencies" : {
+        
+     },
+     "devDepdencies":{
+       
+    },
+    "main" : "./lib/google"
+}
