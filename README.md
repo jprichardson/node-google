@@ -40,7 +40,14 @@ google('node.js best practices', function(err, next, links){
 });
 ```
 
+Test
+----
 
+    npm test
+
+or...
+
+    mocha test
 
 License
 -------
