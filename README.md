@@ -3,6 +3,7 @@ Node.js - google
 
 This module allows you to search google by scraping the results. It does NOT use the Google Search API. PLEASE DO NOT ABUSE THIS. The intent of using this is convenience vs the cruft that exists in the Google Search API.
 
+This is not sponsored, supported, or affiliated with Google Inc.
 
 
 Installation
