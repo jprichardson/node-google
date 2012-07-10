@@ -20,7 +20,7 @@
         "request": "2.9.x"
      },
      "devDepdencies":{
-        "mocha": "1.1.x",
+        "mocha": "1.1.x"
     },
     "main" : "./lib/google",
     "scripts": {
