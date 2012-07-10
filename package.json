@@ -1,7 +1,7 @@
 {
     "name" : "google", 
     "version" : "0.0.1",
-    "description" : "A module to search google.",
+    "description" : "A module to search and scrape google.",
     "homepage" : [
         "https://github.com/jprichardson/node-google"
     ],
@@ -9,17 +9,21 @@
         "type" : "git", 
         "url" : "https://github.com/jprichardson/node-google"
     },
-    "keywords" : ["google", "search"],
+    "keywords" : ["google", "search", "scrape", "scraper", "screen"],
     "author" : "JP Richardson <jprichardson@gmail.com>",
     "licenses" : [ {
         "type" : "MIT",
         "url" : "http://github.com/jprichardson/node-google/raw/master/LICENSE"
     }],
     "dependencies" : {
-        
+        "cheerio": "0.8.x",
+        "request": "2.9.x"
      },
      "devDepdencies":{
-       
+        "mocha": "1.1.x",
     },
-    "main" : "./lib/google"
+    "main" : "./lib/google",
+    "scripts": {
+        "test": "mocha test"
+    }
 }
