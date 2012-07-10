@@ -33,7 +33,9 @@ google('node.js best practices', function(err, next, links){
 
   	if (nextCounter < 4){
       nextCounter += 1;
-      next();
+      if (next) {
+        next();
+      }
   	}
 
   }
