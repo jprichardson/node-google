@@ -26,22 +26,18 @@ google.resultsPerPage = 25;
 var nextCounter = 0;
 
 google('node.js best practices', function(err, next, links){
-  if (err) {
-  	console.error(err);
-  } else {
-  	for (var i = 0; i < links.length; ++i) {
-  	  console.log(links[i].title + ' - ' + links[i].link);
-  	  console.log(links[i].description + "\n");
-  	}
-
-  	if (nextCounter < 4){
-      nextCounter += 1;
-      if (next) {
-        next();
-      }
-  	}
-
+  if (err) console.error(err);
+  	
+  for (var i = 0; i < links.length; ++i) {
+    console.log(links[i].title + ' - ' + links[i].link);
+    console.log(links[i].description + "\n");
   }
+
+  if (nextCounter < 4) {
+    nextCounter += 1;
+    if (next) next();
+  }
+
 });
 ```
 
