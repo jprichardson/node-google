@@ -11,8 +11,7 @@ describe('+ google()', function(){
     var query = "Microsoft";
 
     var finished = function(){
-      //console.log(allLinks.length);
-      T(allLinks.length >= 30);
+      T (allLinks.length > 20);
       var flags = 0x0;
       for (var i = 0; i < allLinks.length; ++i) {
         var link = allLinks[i];
@@ -35,7 +34,7 @@ describe('+ google()', function(){
         }
       }
 
-      T(flags === 31); //all flags above set properly
+      T (flags === 31); //all flags above set properly
 
       done();
     }
@@ -44,13 +43,6 @@ describe('+ google()', function(){
     google(query, function(err, next, links){
       //console.log('L: ' + links.length);
       allLinks = allLinks.concat(links);
-      /*
-      for (var i = 0; i < links.length; ++i) {
-        var link = links[i];
-        console.log(link.title + ' - ' + link.link);
-        console.log(link.description)
-        console.log('')
-      }*/
       if (nextCounter < 2) {
         if (next) {
           nextCounter += 1;
@@ -62,5 +54,28 @@ describe('+ google()', function(){
         finished();
       }
     });
-  });
-}); 
+  
+  })
+
+  describe('when resultsPerPage is set', function () {
+    it('should return search results', function(done){
+      var nextCounter = 0
+        , allLinks = []
+        , query = "Microsoft";
+
+      var finished = function(){
+        T (allLinks.length > 90);
+        done()
+      }
+
+      google.resultsPerPage = 100;
+      google(query, function(err, next, links){
+        allLinks = allLinks.concat(links);
+        //console.log(allLinks.length)
+        finished();
+      })
+    
+    })
+  })
+
+}) 

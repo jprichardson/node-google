@@ -6,6 +6,7 @@ This module allows you to search google by scraping the results. It does NOT use
 This is not sponsored, supported, or affiliated with Google Inc.
 
 
+
 Installation
 ------------
 
@@ -21,6 +22,7 @@ This prints out the first 50 search results of the query `node.js best practices
 ```javascript
 var google = require('google');
 
+google.resultsPerPage = 25;
 var nextCounter = 0;
 
 google('node.js best practices', function(err, next, links){
@@ -42,6 +44,7 @@ google('node.js best practices', function(err, next, links){
   }
 });
 ```
+
 
 Test
 ----

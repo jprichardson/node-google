@@ -1,29 +1,37 @@
 {
-    "name" : "google", 
-    "version" : "0.0.2",
-    "description" : "A module to search and scrape google. This is not sponsored, supported, or affiliated with Google Inc.",
-    "homepage" : [
-        "https://github.com/jprichardson/node-google"
-    ],
-    "repository" : {
-        "type" : "git", 
-        "url" : "https://github.com/jprichardson/node-google"
-    },
-    "keywords" : ["google", "search", "scrape", "scraper", "screen"],
-    "author" : "JP Richardson <jprichardson@gmail.com>",
-    "licenses" : [ {
-        "type" : "MIT",
-        "url" : "http://github.com/jprichardson/node-google/raw/master/LICENSE"
-    }],
-    "dependencies" : {
-        "cheerio": "0.8.x",
-        "request": "2.9.x"
-     },
-     "devDepdencies":{
-        "mocha": "1.1.x"
-    },
-    "main" : "./lib/google",
-    "scripts": {
-        "test": "mocha test"
+  "name": "google",
+  "version": "0.1.0",
+  "description": "A module to search and scrape google. This is not sponsored, supported, or affiliated with Google Inc.",
+  "homepage": [
+    "https://github.com/jprichardson/node-google"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jprichardson/node-google"
+  },
+  "keywords": [
+    "google",
+    "search",
+    "scrape",
+    "scraper",
+    "screen"
+  ],
+  "author": "JP Richardson <jprichardson@gmail.com>",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/jprichardson/node-google/raw/master/LICENSE"
     }
+  ],
+  "dependencies": {
+    "cheerio": "~0.10.1",
+    "request": "2.9.x"
+  },
+  "devDepdencies": {
+    "mocha": "*"
+  },
+  "main": "./lib/google",
+  "scripts": {
+    "test": "mocha test"
+  }
 }
