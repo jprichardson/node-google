@@ -1,0 +1,36 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+  , google = require('../lib/google')
+
+program.version(require('../package').version)
+  .option('-q, --query <query>', 'Search query.')
+  .option('-p, --pages [num]', 'Number of pages to search. defaults to 5', function(p) { return parseInt(p, 10) })
+  .option('-n, --results-per-page [num]', 'Number of results per page. defaults to 100', function(n) { return parseInt(n, 10) })
+  //.option('-h, --header', 'Include the CSV header. defaults to false')
+  .parse(process.argv)
+
+if (!program.query) {
+  console.error("Query parameter required. See --help for more details.")
+  process.exit(1)
+}
+
+program.pages = program.pages || 5
+program.resultsPerPage = program.resultsPerPage || 100
+program.header = program.header || false
+
+google.resultsPerPage = program.resultsPerPage
+
+var nextCounter = 0;
+google(program.query, function(err, next, links){
+  if (err) console.error(err)
+
+  links.forEach(function(link) {
+    console.log('"%s","%s","%s"', link.href, link.title, link.description)
+  })
+
+  if (nextCounter < program.pages - 1) {
+    nextCounter += 1;
+    if (next) next()
+  }
+})

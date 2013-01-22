@@ -1,6 +1,6 @@
 {
   "name": "google",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A module to search and scrape google. This is not sponsored, supported, or affiliated with Google Inc.",
   "homepage": [
     "https://github.com/jprichardson/node-google"
@@ -24,8 +24,9 @@
     }
   ],
   "dependencies": {
-    "cheerio": "~0.10.1",
-    "request": "2.9.x"
+    "cheerio": "0.10.4",
+    "request": "2.12.x",
+    "commander": "~1.1.1"
   },
   "devDepdencies": {
     "mocha": "*"
@@ -33,5 +34,8 @@
   "main": "./lib/google",
   "scripts": {
     "test": "mocha test"
+  },
+  "bin": {
+    "google": "./bin/google"
   }
 }
