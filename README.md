@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/jprichardson/node-google.png)](http://travis-ci.org/jprichardson/node-google)
 Node.js - google
 =====================
 
