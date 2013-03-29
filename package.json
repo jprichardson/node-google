@@ -29,7 +29,7 @@
     "commander": "~1.1.1"
   },
   "devDepdencies": {
-    "mocha": "*"
+    "mocha": "1.x"
   },
   "main": "./lib/google",
   "scripts": {
