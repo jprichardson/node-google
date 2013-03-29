@@ -1,3 +1,8 @@
+0.3.0 / 2013-03-29
+------------------
+* upgrade to `cheerio 0.10.8`
+* fixed element traversal bug: see https://github.com/MatthewMueller/cheerio/issues/167
+
 0.2.0 / 2013-01-22
 ------------------
 * Fixed Cheerio dependency bug. Stuck at version 0.10.4

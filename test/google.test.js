@@ -15,6 +15,7 @@ describe('+ google()', function(){
       var flags = 0x0;
       for (var i = 0; i < allLinks.length; ++i) {
         var link = allLinks[i];
+        //console.dir(link)
         if (link.title && link.link) {
           if (link.title.indexOf('Wikipedia')) {
             flags |= 0x1;
@@ -34,6 +35,7 @@ describe('+ google()', function(){
         }
       }
 
+      //console.log(flags)
       T (flags === 31); //all flags above set properly
 
       done();

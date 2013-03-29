@@ -24,7 +24,7 @@
     }
   ],
   "dependencies": {
-    "cheerio": "0.10.4",
+    "cheerio": "~0.10.8",
     "request": "2.12.x",
     "commander": "~1.1.1"
   },
