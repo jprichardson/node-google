@@ -1,3 +1,7 @@
+0.3.1 / 2013-06-21
+------------------
+* Fixed bug that had the descriptions showing "Cached" at the start. @cancio [#4]
+
 0.3.0 / 2013-03-29
 ------------------
 * upgrade to `cheerio 0.10.8`

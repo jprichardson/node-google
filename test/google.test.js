@@ -1,8 +1,6 @@
-var google = require('../lib/google');
-var assert = require('assert');
-
-var T = function(expr){ assert(expr); };
-var F = function(expr){ assert(!expr); };
+var testutil = require('testutil')
+  , google = require('../lib/google')
+  , S = require('string')
 
 describe('+ google()', function(){
   it('should return search results', function(done){
@@ -33,6 +31,8 @@ describe('+ google()', function(){
             flags |= 0x10;
           }
         }
+      
+        T (link.description.indexOf('Cached') == -1)
       }
 
       //console.log(flags)

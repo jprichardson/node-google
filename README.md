@@ -92,6 +92,12 @@ Test
     npm test
 
 
+Contributors
+------------
+
+* [JP Richardson](https://github.com/jprichardson)
+* [Antonio Cancio](https://github.com/cancio)
+
 
 License
 -------
