@@ -1,6 +1,5 @@
 var testutil = require('testutil')
   , google = require('../lib/google')
-  , S = require('string')
 
 describe('+ google()', function(){
   it('should return search results', function(done){
