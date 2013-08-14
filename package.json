@@ -1,6 +1,6 @@
 {
   "name": "google",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "A module to search and scrape google. This is not sponsored, supported, or affiliated with Google Inc.",
   "homepage": "https://github.com/jprichardson/node-google",
   "repository": {
