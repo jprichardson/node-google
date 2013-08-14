@@ -97,6 +97,7 @@ Contributors
 
 * [JP Richardson](https://github.com/jprichardson)
 * [Antonio Cancio](https://github.com/cancio)
+* [Mike Anderson](https://github.com/cambridgemike)
 
 
 License

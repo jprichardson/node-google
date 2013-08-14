@@ -1,3 +1,7 @@
+0.3.2 / 2013-08-14
+------------------
+* add debugging for errors
+
 0.3.1 / 2013-06-21
 ------------------
 * Fixed bug that had the descriptions showing "Cached" at the start. @cancio [#4]
