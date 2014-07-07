@@ -1,3 +1,7 @@
+0.3.3 / 2014-07-07
+------------------
+* bugfix: search result titles [#8](https://github.com/jprichardson/node-google/pull/8)
+
 0.3.2 / 2013-08-14
 ------------------
 * add debugging for errors
