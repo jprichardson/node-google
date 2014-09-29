@@ -43,7 +43,18 @@ google('node.js best practices', function(err, next, links){
 });
 ```
 
+You can also specify the TLD of the Google search page and the language.
 
+```javascript
+var google = require('google');
+
+google.lang = 'de';
+google.tld = 'de';
+
+google('node.js best practices', function(err, next, links){
+  …
+});
+```
 
 CLI
 ---
@@ -64,6 +75,8 @@ You can use the `google` package as a command line program as well. Just specify
       -q, --query <query>           Search query.
       -p, --pages [num]             Number of pages to search. defaults to 5
       -n, --results-per-page [num]  Number of results per page. defaults to 100
+      -t, --tld [tld]               TLD of Google search. defaults to com
+      -l, --language [lang]         Language of search. defaults to en
 
 
 ### Example
