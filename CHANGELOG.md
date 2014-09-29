@@ -1,3 +1,7 @@
+0.4.0 / 2014-09-29
+------------------
+- add `tld` and `language` selection. https://github.com/jprichardson/node-google/pull/11
+
 0.3.4 / 2014-07-28
 ------------------
 * bugix: when `resp` is `undefined/null` calling `resp.statuCode` is another error [#9](https://github.com/jprichardson/node-google/pull/9)
