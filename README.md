@@ -113,6 +113,7 @@ Contributors
 * [Mike Anderson](https://github.com/cambridgemike)
 * [ithil](https://github.com/ithil)
 * [Jaimie Pillora](https://github.com/jpillora)
+* [Jan Ehrhardt](https://github.com/jehrhardt)
 
 
 License
