@@ -1,3 +1,7 @@
+0.5.0 / 2014-09-30
+------------------
+- bugfix: CSV quoting in the command line program. https://github.com/jprichardson/node-google/pull/12
+
 0.4.0 / 2014-09-29
 ------------------
 - add `tld` and `language` selection. https://github.com/jprichardson/node-google/pull/11
