@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
-var program = require('commander')
-  , google = require('../lib/google')
+var program = require('commander'),
+    google = require('../lib/google'),
+    csv = require('fast-csv');
 
 program.version(require('../package').version)
   .option('-q, --query <query>', 'Search query.')
@@ -31,9 +32,13 @@ var nextCounter = 0;
 google(program.query, function(err, next, links){
   if (err) console.error(err)
 
-  links.forEach(function(link) {
-    console.log('"%s","%s","%s"', link.href, link.title, link.description)
-  })
+  csv.writeToString(links, {
+    transform: function(link) {
+      return [link.href, link.title, link.description];
+    }
+  }, function(err, data) {
+    console.log(data);
+  });
 
   if (nextCounter < program.pages - 1) {
     nextCounter += 1;

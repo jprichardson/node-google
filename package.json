@@ -24,7 +24,8 @@
   "dependencies": {
     "cheerio": "~0.10.8",
     "request": "2.12.x",
-    "commander": "~1.1.1"
+    "commander": "~1.1.1",
+    "fast-csv": "~0.5.2"
   },
   "devDependencies": {
     "mocha": "*",
