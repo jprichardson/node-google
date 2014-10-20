@@ -29,7 +29,7 @@ var nextCounter = 0;
 
 google('node.js best practices', function(err, next, links){
   if (err) console.error(err);
-  	
+    
   for (var i = 0; i < links.length; ++i) {
     console.log(links[i].title + ' - ' + links[i].link); //link.href is an alias for link.link
     console.log(links[i].description + "\n");
@@ -50,6 +50,18 @@ var google = require('google');
 
 google.lang = 'de';
 google.tld = 'de';
+
+google('node.js best practices', function(err, next, links){
+  …
+});
+```
+
+Specifying a proxy to be used when searching
+
+```javascript
+var google = require('google');
+
+google.proxy = 'http://user:password@192.168.5.4:80';
 
 google('node.js best practices', function(err, next, links){
   …
