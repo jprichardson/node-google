@@ -1,3 +1,7 @@
+0.6.0 / 2014-10-23
+------------------
+- added `proxy` field https://github.com/jprichardson/node-google/pull/16
+
 0.5.0 / 2014-09-30
 ------------------
 - bugfix: CSV quoting in the command line program. https://github.com/jprichardson/node-google/pull/12
