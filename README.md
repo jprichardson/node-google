@@ -56,12 +56,25 @@ google('node.js best practices', function(err, next, links){
 });
 ```
 
-Specifying a proxy to be used when searching
+You can specify the options to be passed to request, see the [request module](https://github.com/request/request) for all available options.
 
 ```javascript
 var google = require('google');
 
-google.proxy = 'http://user:password@192.168.5.4:80';
+google.requestOptions = {
+    proxy: 'http://user:password@192.168.5.4:80',
+    timeout: 30000,
+    localAddress: '127.0.0.1',
+    jar: true,
+    headers": {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Encoding": "gzip, deflate",
+        "Accept-Language": "en;q=0.5",
+        "Cache-Control": "max-age=0",
+        "Connection": "keep-alive",
+        "DNT": 1
+    }
+};
 
 google('node.js best practices', function(err, next, links){
   …
