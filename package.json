@@ -27,10 +27,10 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "testutil": "~0.5.1"
+    "standard": "^3.2.1"
   },
   "main": "./lib/google",
   "scripts": {
-    "test": "mocha test"
+    "test": "standard && mocha"
   }
 }

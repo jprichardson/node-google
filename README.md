@@ -7,6 +7,7 @@ This module allows you to search google by scraping the results. It does NOT use
 
 This is not sponsored, supported, or affiliated with Google Inc.
 
+[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
 
 
 Installation
@@ -21,71 +22,64 @@ API Example
 
 This prints out the first 50 search results of the query `node.js best practices`.
 
-```javascript
-var google = require('google');
+```js
+var google = require('google')
 
-google.resultsPerPage = 25;
-var nextCounter = 0;
+google.resultsPerPage = 25
+var nextCounter = 0
 
-google('node.js best practices', function(err, next, links){
-  if (err) console.error(err);
+google('node.js best practices', function (err, next, links){
+  if (err) console.error(err)
 
   for (var i = 0; i < links.length; ++i) {
-    console.log(links[i].title + ' - ' + links[i].link); //link.href is an alias for link.link
-    console.log(links[i].description + "\n");
+    console.log(links[i].title + ' - ' + links[i].link) // link.href is an alias for link.link
+    console.log(links[i].description + "\n")
   }
 
   if (nextCounter < 4) {
-    nextCounter += 1;
-    if (next) next();
+    nextCounter += 1
+    if (next) next()
   }
-
-});
+})
 ```
 
 You can also specify the TLD of the Google search page and the language.
 
-```javascript
-var google = require('google');
+```js
+var google = require('google')
 
-google.lang = 'de';
-google.tld = 'de';
+google.lang = 'de'
+google.tld = 'de'
 
-google('node.js best practices', function(err, next, links){
+google('node.js best practices', function (err, next, links){
   …
-});
+})
 ```
 
 You can specify the options to be passed to request, see the [request module](https://github.com/request/request) for all available options.
 
-```javascript
-var google = require('google');
+```js
+var google = require('google')
 
 google.requestOptions = {
-    proxy: 'http://user:password@192.168.5.4:80',
-    timeout: 30000,
-    localAddress: '127.0.0.1',
-    jar: true,
-    headers": {
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Encoding": "gzip, deflate",
-        "Accept-Language": "en;q=0.5",
-        "Cache-Control": "max-age=0",
-        "Connection": "keep-alive",
-        "DNT": 1
-    }
-};
+  proxy: 'http://user:password@192.168.5.4:80',
+  timeout: 30000,
+  localAddress: '127.0.0.1',
+  jar: true,
+  headers: {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Encoding': 'gzip, deflate',
+    'Accept-Language': 'en;q=0.5',
+    'Cache-Control': 'max-age=0',
+    'Connection': 'keep-alive',
+    'DNT': 1
+  }
+}
 
-google('node.js best practices', function(err, next, links){
+google('node.js best practices', function (err, next, links){
   …
-});
+})
 ```
-
-
-Test
-----
-
-    npm test
 
 
 Contributors
