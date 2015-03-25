@@ -1,3 +1,11 @@
+1.0.0 / 2015-03-24
+------------------
+- exposed all of `request` options https://github.com/jprichardson/node-google/pull/21
+- extracted out CLI interface
+- using [JavaScript Standard Style](https://github.com/feross/standard)
+- upgrade `request` from `2.12.x` to `^2.54.0`
+- upgrade `cheerio` from `0.10.8` to `^0.19.0`
+
 0.6.0 / 2014-10-23
 ------------------
 - added `proxy` field https://github.com/jprichardson/node-google/pull/16
