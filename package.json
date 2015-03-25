@@ -22,8 +22,8 @@
     }
   ],
   "dependencies": {
-    "cheerio": "~0.10.8",
-    "request": "2.12.x"
+    "cheerio": "^0.19.0",
+    "request": "^2.54.0"
   },
   "devDependencies": {
     "mocha": "*",
