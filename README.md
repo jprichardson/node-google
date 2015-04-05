@@ -44,12 +44,14 @@ google('node.js best practices', function (err, next, links){
 ```
 
 You can also specify the TLD of the Google search page and the language.
+If you change the language you must translate the next page results text to detect the corresponding link.
 
 ```js
 var google = require('google')
 
 google.lang = 'de'
 google.tld = 'de'
+google.nextText = 'Weiter'
 
 google('node.js best practices', function (err, next, links){
   …
