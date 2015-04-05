@@ -80,4 +80,36 @@ describe('+ google()', function () {
 
     })
   })
+
+  describe('when nextText and lang are set', function () {
+    it('should return next page search results', function (done) {
+      var nextCounter = 0
+      var allLinks = []
+      var query = 'Microsoft'
+
+      var finished = function () {
+        assert(allLinks.length > 25)
+        done()
+      }
+
+      google.resultsPerPage = 25
+      google.lang = 'it'
+      google.nextText = 'Avanti'
+      google(query, function (err, next, links) {
+        assert.ifError(err)
+        allLinks = allLinks.concat(links)
+        if (nextCounter < 2) {
+          if (next) {
+            nextCounter += 1
+            next()
+          } else {
+            finished()
+          }
+        } else {
+          finished()
+        }
+      })
+
+    })
+  })
 })
