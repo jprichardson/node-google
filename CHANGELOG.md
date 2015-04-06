@@ -1,3 +1,7 @@
+1.1.0 / 2015-04-05
+------------------
+- added option `nextText` for languages other than English https://github.com/jprichardson/node-google/pull/25
+
 1.0.0 / 2015-03-24
 ------------------
 - exposed all of `request` options https://github.com/jprichardson/node-google/pull/21
