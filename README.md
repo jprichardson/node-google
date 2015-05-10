@@ -43,12 +43,12 @@ google('node.js best practices', function (err, next, links){
 })
 ```
 
-You can specify results in a certain timeframe. Working values listed below:
+You can specify results in a specific timeframe. Working values listed below:
 
 ```js
 var google = require('google')
 
-// assign one of the values below. Defaults to google.resultsTimeFrame = 'y' for past year results
+// assign one of the values below. Nothing is set by default.
 google.resultsTimeFrame = 'h' // information indexed in the past hour
 google.resultsTimeFrame = 'd' // information indexed in the past day
 google.resultsTimeFrame = 'w' // information indexed in the past week
