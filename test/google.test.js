@@ -81,6 +81,29 @@ describe('+ google()', function () {
     })
   })
 
+  describe('when resultsTimeFrame is set', function () {
+    it('each time-based query should return search results', function (done) {
+      var allLinks = []
+      var query = 'Microsoft'
+      var time_params = ['h6', 'd8', 'w', 'm']
+
+      var finished = function () {
+        assert(allLinks.length === 10)
+        done()
+      }
+
+      google.resultsPerPage = 10
+      time_params.forEach(function (param) {
+        google.resultsTimeFrame = param
+        google(query, function (err, next, links) {
+          assert.ifError(err)
+          allLinks = allLinks.concat(links)
+          finished()
+        })
+      })
+    })
+  })
+
   describe('when nextText and lang are set', function () {
     it('should return next page search results', function (done) {
       var nextCounter = 0

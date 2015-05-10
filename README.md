@@ -43,7 +43,7 @@ google('node.js best practices', function (err, next, links){
 })
 ```
 
-You can specify results in a certain timeframe. Defaults to results in the last year. Working values listed below:
+You can specify results in a certain timeframe. Working values listed below:
 
 ```js
 var google = require('google')
@@ -53,6 +53,7 @@ google.resultsTimeFrame = 'h' // information indexed in the past hour
 google.resultsTimeFrame = 'd' // information indexed in the past day
 google.resultsTimeFrame = 'w' // information indexed in the past week
 google.resultsTimeFrame = 'm' // information indexed in the past month
+google.resultsTimeFrame = 'y' // information indexed in the past year
 ```
 
 You can also specify the TLD of the Google search page and the language.
