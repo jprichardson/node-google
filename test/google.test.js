@@ -84,7 +84,7 @@ describe('+ google()', function () {
     it('each time-based query should return search results', function (done) {
       var allLinks = []
       var query = 'Microsoft'
-      var time_param = 'm'
+      var timeFrame = 'm'
 
       var finished = function () {
         assert(allLinks.length === 10)
@@ -92,7 +92,7 @@ describe('+ google()', function () {
       }
 
       google.resultsPerPage = 10
-      google.resultsTimeFrame = time_param
+      google.resultsTimeFrame = timeFrame
       google(query, function (err, next, links) {
         assert.ifError(err)
         allLinks = allLinks.concat(links)
