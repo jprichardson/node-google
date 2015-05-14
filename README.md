@@ -43,18 +43,24 @@ google('node.js best practices', function (err, next, links){
 })
 ```
 
+
+### Search Within a Time Span
+
 You can specify results in a specific timeframe. Working values listed below:
 
 ```js
 var google = require('google')
 
 // assign one of the values below. Nothing is set by default.
-google.resultsTimeFrame = 'h' // information indexed in the past hour
-google.resultsTimeFrame = 'd' // information indexed in the past day
-google.resultsTimeFrame = 'w' // information indexed in the past week
-google.resultsTimeFrame = 'm' // information indexed in the past month
-google.resultsTimeFrame = 'y' // information indexed in the past year
+google.timeSpan = 'h' // information indexed in the past hour
+google.timeSpan = 'd' // information indexed in the past day
+google.timeSpan = 'w' // information indexed in the past week
+google.timeSpan = 'm' // information indexed in the past month
+google.timeSpan = 'y' // information indexed in the past year
 ```
+
+
+### Search Within Different Languages
 
 You can also specify the TLD of the Google search page and the language.
 If you change the language you must translate the next page results text to detect the corresponding link.
@@ -70,6 +76,9 @@ google('node.js best practices', function (err, next, links){
   …
 })
 ```
+
+
+### Set Request Options
 
 You can specify the options to be passed to request, see the [request module](https://github.com/request/request) for all available options.
 
@@ -95,18 +104,6 @@ google('node.js best practices', function (err, next, links){
   …
 })
 ```
-
-
-Contributors
-------------
-
-* [JP Richardson](https://github.com/jprichardson)
-* [Antonio Cancio](https://github.com/cancio)
-* [Mike Anderson](https://github.com/cambridgemike)
-* [ithil](https://github.com/ithil)
-* [Jaimie Pillora](https://github.com/jpillora)
-* [Jan Ehrhardt](https://github.com/jehrhardt)
-* [Griffith T. Pickett](https://github.com/tpickett)
 
 
 License

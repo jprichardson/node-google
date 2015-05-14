@@ -80,7 +80,7 @@ describe('+ google()', function () {
     })
   })
 
-  describe('when resultsTimeFrame is set', function () {
+  describe('when timeSpan is set', function () {
     it('each time-based query should return search results', function (done) {
       var allLinks = []
       var query = 'Microsoft'
@@ -92,7 +92,7 @@ describe('+ google()', function () {
       }
 
       google.resultsPerPage = 10
-      google.resultsTimeFrame = timeFrame
+      google.timeSpan = timeFrame
       google(query, function (err, next, links) {
         assert.ifError(err)
         allLinks = allLinks.concat(links)
