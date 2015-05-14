@@ -92,7 +92,6 @@ describe('+ google()', function () {
       }
 
       google.resultsPerPage = 10
-      console.log('time based search')
       google.resultsTimeFrame = time_param
       google(query, function (err, next, links) {
         assert.ifError(err)
@@ -104,7 +103,6 @@ describe('+ google()', function () {
 
   describe('when nextText and lang are set', function () {
     it('should return next page search results', function (done) {
-//      console.log('ok test 4 link length: ' + allLinks.length)
       var nextCounter = 0
       var allLinks = []
       var query = 'Microsoft'
