@@ -1,3 +1,7 @@
+1.2.0 / 2015-05-14
+------------------
+- added `timeSpan` option: https://github.com/jprichardson/node-google/pull/26#issuecomment-101983266
+
 1.1.0 / 2015-04-05
 ------------------
 - added option `nextText` for languages other than English https://github.com/jprichardson/node-google/pull/25
