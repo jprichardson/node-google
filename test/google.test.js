@@ -77,12 +77,34 @@ describe('+ google()', function () {
         // console.log(allLinks.length)
         finished()
       })
+    })
+  })
 
+  describe('when resultsTimeFrame is set', function () {
+    it('each time-based query should return search results', function (done) {
+      var allLinks = []
+      var query = 'Microsoft'
+      var time_param = 'm'
+
+      var finished = function () {
+        assert(allLinks.length === 10)
+        done()
+      }
+
+      google.resultsPerPage = 10
+      console.log('time based search')
+      google.resultsTimeFrame = time_param
+      google(query, function (err, next, links) {
+        assert.ifError(err)
+        allLinks = allLinks.concat(links)
+        finished()
+      })
     })
   })
 
   describe('when nextText and lang are set', function () {
     it('should return next page search results', function (done) {
+//      console.log('ok test 4 link length: ' + allLinks.length)
       var nextCounter = 0
       var allLinks = []
       var query = 'Microsoft'
