@@ -3,9 +3,14 @@ Node.js - google
 
 [![build status](https://secure.travis-ci.org/jprichardson/node-google.png)](http://travis-ci.org/jprichardson/node-google)
 
-This module allows you to search google by scraping the results. It does NOT use the Google Search API. PLEASE DO NOT ABUSE THIS. The intent of using this is convenience vs the cruft that exists in the Google Search API.
+This module allows you to search google by scraping the results. It does NOT use the Google Search API. **PLEASE DO NOT ABUSE THIS.** The intent of using this is convenience vs the cruft that exists in the Google Search API.
 
 This is not sponsored, supported, or affiliated with Google Inc.
+
+Please **do not** post an issue, email me, tweet me, or in anyway contact me about getting around Google blocking
+your automated search requests. These sorts of requests are outside the scope of this module. **Google has every
+right to block consumers of their service for any reason.** See: [#27](https://github.com/jprichardson/node-google/issues/27),
+[#20](https://github.com/jprichardson/node-google/issues/20#issuecomment-74289023).
 
 [![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)
 
