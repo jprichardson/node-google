@@ -15,12 +15,7 @@
     "screen"
   ],
   "author": "JP Richardson <jprichardson@gmail.com>",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/jprichardson/node-google/raw/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "dependencies": {
     "cheerio": "^0.19.0",
     "request": "^2.54.0"
