@@ -132,4 +132,25 @@ describe('+ google()', function () {
 
     })
   })
+
+  describe('when start is set', function () {
+    it('optional start parameter should return search results', function (done) {
+      var allLinks = []
+      var query = 'Microsoft'
+      var timeFrame = 'm'
+
+      var finished = function () {
+        assert(allLinks.length === 10)
+        done()
+      }
+
+      google.resultsPerPage = 10
+      google.timeSpan = timeFrame
+      google(query, 2, function (err, next, links) {
+        assert.ifError(err)
+        allLinks = allLinks.concat(links)
+        finished()
+      })
+    })
+  })
 })
