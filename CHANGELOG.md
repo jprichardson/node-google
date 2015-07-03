@@ -1,3 +1,7 @@
+1.3.0 / 2015-07-03
+------------------
+- allowed start parameter now, see: https://github.com/jprichardson/node-google/pull/29
+
 1.2.0 / 2015-05-14
 ------------------
 - added `timeSpan` option: https://github.com/jprichardson/node-google/pull/26#issuecomment-101983266
