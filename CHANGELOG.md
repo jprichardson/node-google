@@ -1,3 +1,7 @@
+1.4.0 / 2015-01-12
+-----------------
+- updated for new Google HTMl
+
 1.3.0 / 2015-07-03
 ------------------
 - allowed start parameter now, see: https://github.com/jprichardson/node-google/pull/29
