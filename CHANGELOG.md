@@ -1,3 +1,7 @@
+1.5.0 / 2016-02-22
+------------------
+- use https, see: https://github.com/jprichardson/node-google/pull/35
+
 1.4.0 / 2015-01-12
 -----------------
 - updated for new Google HTMl
