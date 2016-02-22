@@ -57,7 +57,6 @@ describe('+ google()', function () {
         finished()
       }
     })
-
   })
 
   describe('when resultsPerPage is set', function () {
@@ -129,7 +128,6 @@ describe('+ google()', function () {
           finished()
         }
       })
-
     })
   })
 

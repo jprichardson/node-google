@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "standard": "^3.2.1"
+    "standard": "5.x"
   },
   "main": "./lib/google",
   "scripts": {
