@@ -42,14 +42,21 @@ describe('+ google()', function () {
       done()
     }
 
-    google(query, function (err, next, links) {
+    google(query, function (err, res) {
       assert.ifError(err)
+      assert.equal(res.query, 'Microsoft')
+      assert.equal(typeof res.$, 'function')
+      assert.equal(typeof res.body, 'string')
+      assert.equal(typeof res.url, 'string')
+      assert.equal(res.start, nextCounter * google.resultsPerPage)
+      assert.equal(typeof res.links, 'object')
+      assert.ok(res.links.length <= google.resultsPerPage)
       // console.log('L: ' + links.length)
-      allLinks = allLinks.concat(links)
+      allLinks = allLinks.concat(res.links)
       if (nextCounter < 2) {
-        if (next) {
+        if (res.next) {
           nextCounter += 1
-          next()
+          res.next()
         } else {
           finished()
         }
@@ -70,9 +77,16 @@ describe('+ google()', function () {
       }
 
       google.resultsPerPage = 100
-      google(query, function (err, next, links) {
+      google(query, function (err, res) {
         assert.ifError(err)
-        allLinks = allLinks.concat(links)
+        assert.equal(res.query, 'Microsoft')
+        assert.equal(typeof res.$, 'function')
+        assert.equal(typeof res.body, 'string')
+        assert.equal(typeof res.url, 'string')
+        assert.equal(res.start, 0)
+        assert.equal(typeof res.links, 'object')
+        assert.ok(res.links.length <= google.resultsPerPage)
+        allLinks = allLinks.concat(res.links)
         // console.log(allLinks.length)
         finished()
       })
@@ -92,9 +106,16 @@ describe('+ google()', function () {
 
       google.resultsPerPage = 10
       google.timeSpan = timeFrame
-      google(query, function (err, next, links) {
+      google(query, function (err, res) {
         assert.ifError(err)
-        allLinks = allLinks.concat(links)
+        assert.equal(res.query, 'Microsoft')
+        assert.equal(typeof res.$, 'function')
+        assert.equal(typeof res.body, 'string')
+        assert.equal(typeof res.url, 'string')
+        assert.equal(res.start, 0)
+        assert.equal(typeof res.links, 'object')
+        assert.ok(res.links.length <= google.resultsPerPage)
+        allLinks = allLinks.concat(res.links)
         finished()
       })
     })
@@ -114,13 +135,13 @@ describe('+ google()', function () {
       google.resultsPerPage = 25
       google.lang = 'it'
       google.nextText = 'Avanti'
-      google(query, function (err, next, links) {
+      google(query, function (err, res) {
         assert.ifError(err)
-        allLinks = allLinks.concat(links)
+        allLinks = allLinks.concat(res.links)
         if (nextCounter < 2) {
-          if (next) {
+          if (res.next) {
             nextCounter += 1
-            next()
+            res.next()
           } else {
             finished()
           }
@@ -144,9 +165,16 @@ describe('+ google()', function () {
 
       google.resultsPerPage = 10
       google.timeSpan = timeFrame
-      google(query, 2, function (err, next, links) {
+      google(query, 2, function (err, res) {
         assert.ifError(err)
-        allLinks = allLinks.concat(links)
+        assert.equal(res.query, 'Microsoft')
+        assert.equal(typeof res.$, 'function')
+        assert.equal(typeof res.body, 'string')
+        assert.equal(typeof res.url, 'string')
+        assert.equal(res.start, 2)
+        assert.equal(typeof res.links, 'object')
+        assert.ok(res.links.length <= google.resultsPerPage)
+        allLinks = allLinks.concat(res.links)
         finished()
       })
     })
