@@ -1,4 +1,4 @@
-2.0.0 / 2016-03-04
+2.0.0 / 2016-03-09
 ------------------
 - provide links, next and more attributes as a single response object, see: https://github.com/jprichardson/node-google/pull/38
 
