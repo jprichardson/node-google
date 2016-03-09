@@ -33,17 +33,18 @@ var google = require('google')
 google.resultsPerPage = 25
 var nextCounter = 0
 
-google('node.js best practices', function (err, next, links){
+google('node.js best practices', function (err, res){
   if (err) console.error(err)
 
-  for (var i = 0; i < links.length; ++i) {
-    console.log(links[i].title + ' - ' + links[i].link) // link.href is an alias for link.link
-    console.log(links[i].description + "\n")
+  for (var i = 0; i < res.links.length; ++i) {
+    var link = res.links[i];
+    console.log(link.title + ' - ' + link.href)
+    console.log(link.description + "\n")
   }
 
   if (nextCounter < 4) {
     nextCounter += 1
-    if (next) next()
+    if (res.next) res.next()
   }
 })
 ```
@@ -77,7 +78,7 @@ google.lang = 'de'
 google.tld = 'de'
 google.nextText = 'Weiter'
 
-google('node.js best practices', function (err, next, links){
+google('node.js best practices', function (err, res){
   …
 })
 ```
@@ -105,11 +106,42 @@ google.requestOptions = {
   }
 }
 
-google('node.js best practices', function (err, next, links){
+google('node.js best practices', function (err, res){
   …
 })
 ```
 
+The response object
+-------
+
+The provided callback will receive a response object as second argument, it has these properties:
+
+- `url`: The URL requested from Google for this search and page
+- `query`: The search provided on this call
+- `start`: The index of the first link across the links of all pages
+- `links`: An array with all the link objects
+- `body`: The HTML of the loaded page
+- `$`: A cheerio instance of the loaded page
+
+
+Updating from 1.x
+-------
+
+The only backwards-incompatible change from 1.x is that the callback received 3 arguments:
+```js
+google('...', function (err, next, links) {
+  links.forEach(function(link) { ... })
+  if (next) next()
+})
+```
+
+And it now receives a single `res` object. The above code should be rewritten to:
+```js
+google('...', function (err, res) {
+  res.links.forEach(function(link) { ... })
+  if (res.next) res.next()
+})
+```
 
 License
 -------

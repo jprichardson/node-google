@@ -1,3 +1,7 @@
+2.0.0 / 2016-03-04
+------------------
+- provide links, next and more attributes as a single response object, see: https://github.com/jprichardson/node-google/pull/38
+
 1.5.0 / 2016-02-22
 ------------------
 - use https, see: https://github.com/jprichardson/node-google/pull/35
