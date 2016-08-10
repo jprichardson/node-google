@@ -111,6 +111,21 @@ google('node.js best practices', function (err, res){
 })
 ```
 
+### Setting the protocol
+
+A 'http' or 'https' protocol can be specified after the google object has been created for queries. For example specifying 'http' will search google using the a http://www.google.com query where 'https' will use a https://www.google.com query. If no protocol is specified or any other protocol other then 'http' or 'https' is explicitly passed then this will be set to 'https' by default.
+
+```js
+var google = require('google')
+
+google.protocol = 'http'  // searches google using http://www.google.com
+google.protocol = 'https' // searches google using https://www.google.com
+
+google('node.js best practices', function (err, res){
+  …
+})
+```
+
 The response object
 -------
 
@@ -122,7 +137,6 @@ The provided callback will receive a response object as second argument, it has 
 - `links`: An array with all the link objects
 - `body`: The HTML of the loaded page
 - `$`: A cheerio instance of the loaded page
-
 
 Updating from 1.x
 -------
@@ -149,4 +163,3 @@ License
 Licensed under MIT. See `LICENSE` for more details.
 
 Copyright (c) 2012-2015 JP Richardson
-
