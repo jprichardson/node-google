@@ -1,3 +1,8 @@
+2.1.0 / 2016-08-11
+------------------
+### Added
+- `https` support
+
 2.0.0 / 2016-03-09
 ------------------
 - provide links, next and more attributes as a single response object, see: https://github.com/jprichardson/node-google/pull/38
