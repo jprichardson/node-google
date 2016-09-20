@@ -25,7 +25,7 @@ Installation
 API Example
 -------
 
-This prints out the first 50 search results of the query `node.js best practices`.
+This prints out the first 100 search results of the query `node.js best practices`.
 
 ```js
 var google = require('google')
@@ -136,6 +136,7 @@ The provided callback will receive a response object as second argument, it has 
 - `start`: The index of the first link across the links of all pages
 - `links`: An array with all the link objects
 - `body`: The HTML of the loaded page
+- `next`: A method that invokes the originally specified callback with next page results
 - `$`: A cheerio instance of the loaded page
 
 Updating from 1.x
@@ -162,4 +163,4 @@ License
 
 Licensed under MIT. See `LICENSE` for more details.
 
-Copyright (c) 2012-2015 JP Richardson
+Copyright (c) 2012-2016 JP Richardson
