@@ -138,6 +138,7 @@ The provided callback will receive a response object as second argument, it has 
 - `body`: The HTML of the loaded page
 - `next`: A method that invokes the originally specified callback with next page results
 - `$`: A cheerio instance of the loaded page
+- `resultCount`: Googles estimated result count
 
 Updating from 1.x
 -------
