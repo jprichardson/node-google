@@ -84,6 +84,21 @@ google('node.js best practices', function (err, res){
 ```
 
 
+### Search Within Different Categories
+
+You can also specify the type of the Google search.
+
+```js
+var google = require('google')
+
+google.searchType = 'videos'
+
+google('node.js best practices', function (err, res){
+  …
+})
+```
+
+
 ### Set Request Options
 
 You can specify the options to be passed to request, see the [request module](https://github.com/request/request) for all available options.
