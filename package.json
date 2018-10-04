@@ -17,8 +17,8 @@
   "author": "JP Richardson <jprichardson@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^0.19.0",
-    "request": "^2.54.0"
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "mocha": "*",
